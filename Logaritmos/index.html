@@ -1,0 +1,177 @@
+Algoritmo Ejercicio_1
+	//	Entrada: definir variables a,b y c
+	// Salida: definir mayor y menor entre las variables.
+	//Inicializacion: definir variables.
+	Escribir "Ingrese el primer numero"
+	Leer a
+	Escribir "Ingrese el segundo numero"
+	Leer b
+	Escribir "Ingrese el tercer numero"
+	Leer c
+	Mientras a=b o b=c o a=c Hacer
+		Escribir "Se detectó que hay valores iguales"
+		Leer a,b,c
+	FinMientras
+	Si a>b y a>c Entonces
+		Escribir "El primer numero es el mayor", a
+	SiNo
+		si b>a y b>c Entonces
+			Escribir "El segundo numero es el mayor", b
+		SiNo
+			si c>a y c>b Entonces
+				Escribir "El tercer numero es el mayor", c
+			FinSi
+		FinSi
+	FinSi
+	Si a<b y a<c Entonces
+		Escribir "El primer numero es el menor", a
+	SiNo
+		si b<a y b<c Entonces
+			Escribir "El segundo numero es el menor", b
+		SiNo
+			si c<a y c<b Entonces
+				Escribir "El tercer numero es el menor", c
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
+
+
+Algoritmo segundo_ejercicio
+	sum<-0
+	Escribir "Ingrese el valor de n"
+	Leer n
+//	n<-?
+	Para i<-1 Hasta 4 Con Paso 1 Hacer
+		value<-(2*n-1)
+		cadena_compuesta<-Concatenar("cadena","value")
+		sum<-sum+value
+		Escribir sum
+	Fin Para
+FinAlgoritmo
+
+Algoritmo Ejercicio_propuesto_3
+	//Entrada: variables para determinar la longitud de los catetos a,b.
+	//Salida: obtener la hipotenusa.
+	//Inicializacion: catetos.
+	Escribir "Ingrese el primer cateto"
+	Leer a
+	Escribir "Ingrese el segundo cateto"
+	leer b
+	hip<-RC((a^2)+(b^2))
+	Escribir "La hipotenusa es: " hip
+FinAlgoritmo
+
+
+Algoritmo Ejercicio_4
+	//	Inicializacion: definir variables
+	Escribir "Ingrese su nota obtenida en el rango del 1 al 20; para indentificar el color en que se encuentra"
+	leer n
+	Si n<=9 y n>=0 Entonces
+		Escribir "rojo"
+	SiNo
+		si n<=12 y n>=10 Entonces
+			Escribir "Amarillo"
+		SiNo
+			si n<=15 y n>=12 Entonces
+				Escribir "verde"
+			SiNo
+				si n<=18 y n>=15 Entonces
+					Escribir "Turquesa"
+				SiNo
+					si n<=20 y n>=18 Entonces
+						Escribir "Azul"
+			FinSi
+		FinSi
+	FinSi
+FinSi
+Fin Si
+FinAlgoritmo
+
+Algoritmo Ejercicio_5
+//Inicializacion
+	Escribir "Ingrese el primer numero"
+	Leer a
+	Escribir "Ingrese el segundo numero"
+	Leer b
+	si a>b Entonces
+		escribir a ">" b 
+	SiNo
+			Escribir a "<" b
+	FinSi
+FinAlgoritmo
+
+Algoritmo Ejercicio_6
+	//Inicio: declaracion de variables
+	HE=0
+	HS=0
+	pago=0
+	//Observacion 1: En el diagrama aparace incorrecta la variable pago, ya que esta definido como: pagor.
+	Escribir "Ingrese la hora de entrada"
+	leer HE
+	Escribir "Ingrese la hora de salida"
+	leer HS
+	HES<-HS-HE
+	//Observacion 2: No era posible definir la HF, ya que la horaestadia no estaba definida correctamente "hora estadia <>horaestadia"
+	HF<-((HS-HE)-(HS-HE))
+	si HES>1 Entonces
+		Si HF>1 Entonces
+			HES<-HES+1
+		FinSi
+	FinSi 
+	HR<-HES-1
+	pago<-1000+(HR+600)
+	//De lo contrario
+	//	pago=1000
+	Escribir "El pago es de:", pago
+FinAlgoritmo
+
+
+Algoritmo Ejercicio7
+	Escribir "Escriba la primera nota/10"
+	Leer nota_1
+	Escribir "Escriba la segunda nota/10"
+	Leer nota_2
+	Escribir "Escriba la tercera nota/10"
+	Leer nota_3
+	Escribir "Escriba la cuarta nota/10"
+	Leer nota_4
+	p<-((nota_1+nota_2+nota_3+nota_4)/4)
+	Escribir "Ingrese calcular para conocer su promedio final"
+	Leer calcular
+	Mostrar p
+FinAlgoritmo
+
+
+Algoritmo Ejercicio8
+	//Definir variables
+	p1<-0
+	p2<-0
+	ef<-0
+	c<-0
+	promedio <- 0
+	promediof <- 0
+	Escribir "Ingrese las notas en el curso de Historia obtenido en la practica1, practica2, evaluacion final y los creditos"
+	Leer p1h,p2h,efh,ch
+	promedio1<-((p1h+p2h+efh)/3)
+	historia<-(promedio1*ch)
+	
+		Escribir "Ingrese las notas en el curso de matematica obtenido en la practica1, practica2, evaluacion final y los creditos"
+		Leer p1m,p2m,efm,cm
+		promedio2<-((p1m+p2m+efm)/3)
+		matematica<-(promedio2*cm)
+		
+		Escribir "Ingrese las notas en el curso de geografia obtenido en la practica1, practica2, evaluacion final y los creditos"
+		Leer p1g,p2g,efg,cg
+		promedio3<-((p1g+p2g+efg)/3)
+		geografia<-(promedio3*cg)
+		Escribir "Ingrese las notas en el curso de arte obtenido en la practica1, practica2, evaluacion final y los creditos"
+		Leer p1a,p2a,efa,ca
+promedio4<-((p1a+p2a+efa)/3)
+arte<-(promedio4*ca)
+sumanotas<-(historia+matematica+geografia+arte)
+promediot<-((historia+matematica+geografia+arte)/4)
+mostrar "La suma total de las notas es", sumanotas
+Mostrar "El promedio total y final es", promediot
+	
+FinAlgoritmo
